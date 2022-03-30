@@ -3,7 +3,8 @@
 [![License: UPL](https://img.shields.io/badge/license-UPL-green)](https://img.shields.io/badge/license-UPL-green) [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=oracle-devrel_oci-arch-rubyonrails-mds)](https://sonarcloud.io/dashboard?id=oracle-devrel_oci-arch-rubyonrails-mds)
 
 ## Introduction
-MISSING
+
+1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/chiphwang1/terraform-oci-arch-ci-cd-devops-ruby/archive/refs/tags/v.1.0.zip)
 
 ## Getting Started
 MISSING
