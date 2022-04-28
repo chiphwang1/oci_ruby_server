@@ -9,7 +9,7 @@ locale: "en"
 
 variableGroups:
 - title: General Configuration
-  visible: false
+  visible: true
   variables:
   - tenancy_ocid
   - region
