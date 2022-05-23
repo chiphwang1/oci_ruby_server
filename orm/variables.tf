@@ -1,34 +1,65 @@
-## Copyright © 2021, Oracle and/or its affiliates. 
+## Copyright (c) 2021 Oracle and/or its affiliates.
 ## All rights reserved. The Universal Permissive License (UPL), Version 1.0 as shown at http://oss.oracle.com/licenses/upl
 
 variable "release" {
   description = "Reference Architecture Release (OCI Architecture Center)"
-  default     = "1.6"
+  default     = "1.6.2"
 }
 
-variable "tenancy_ocid" {
-  type = string
-  default= ""
-}
-variable "region" { }
-variable "compartment_ocid" {
-  type = string
-  default = ""
-  }
+variable "tenancy_ocid" {}
+variable "region" {}
+variable "compartment_ocid" {}
 #variable "fingerprint" {}
 #variable "user_ocid" {}
 #variable "private_key_path" {}
+
 variable "availablity_domain_name" {
-  type= string
   default = ""
 }
-variable "mysql_db_system_admin_password" {
-type = string
-default = ""
+variable "mysql_db_system_admin_password" {}
+
+variable "use_existing_vcn" {
+  default = false
+}
+
+variable "use_existing_nsg" {
+  default = false
+}
+
+variable "vcn_id" {
+  default = ""
+}
+
+variable "lb_subnet_id" {
+  default = ""
+}
+
+variable "lb_nsg_ids" {
+  default = []
+}
+
+variable "compute_subnet_id" {
+  default = ""
+}
+
+variable "compute_nsg_ids" {
+  default = []
+}
+
+variable "mds_subnet_id" {
+  default = ""
+}
+
+variable "bastion_subnet_id" {
+  default = ""
+}
+
+variable "bastion_nsg_ids" {
+  default = []
 }
 
 variable "use_bastion_service" {
-  default = true
+  default = false
 }
 
 variable "availablity_domain_number" {
@@ -43,8 +74,8 @@ variable "numberOfNodes" {
   default = 2
 }
 
-variable "ruby_version" {
-  default = "3.0.1"
+variable "tomcat_version" {
+  default = "9.0.45"
 }
 
 variable "igw_display_name" {
@@ -119,12 +150,12 @@ variable "InstanceFlexShapeMemory" {
 
 variable "instance_os" {
   description = "Operating system for compute instances"
-  default     = "Canonical Ubuntu"
+  default     = "Oracle Linux"
 }
 
 variable "linux_os_version" {
   description = "Operating system version for all Linux instances"
-  default     = "20.04"
+  default     = "8"
   #  default     = "7.9"
 }
 
@@ -133,7 +164,7 @@ variable "mysql_db_system_admin_username" {
 }
 
 variable "mysql_db_name" {
-  default = "myapp"
+  default = "mydb"
 }
 
 # variable mysql_db_system_availability_domain {}
